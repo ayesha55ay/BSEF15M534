@@ -1,0 +1,56 @@
+#include<stdlib>
+#!usr/bin/python
+print ("Welcome!! SJF in python ")
+
+proc= {}
+
+a_time=[]
+
+b_time=[]
+
+iter= input(" How many processes you want to enter : " )
+
+for i in range (0,iter):
+	
+num=input("Enter arrival time of the process")
+	
+if(i==0):
+		
+  min=num	
+	
+elif(min>num):
+		
+  min=num	
+	
+a_time.append(num)
+	
+num1=input("Enter CPU time of the process")
+	
+b_time.append(num1)
+	
+proc[b_time[i]]=[a_time[i],i+1]
+
+print "Arrival.T"  ,"   " , "Burst.T"
+
+for index in range (0,itera):
+
+  print a_time[index] ,"       " , b_time[index]
+
+b_time.sort()
+
+total=min
+
+if(total>0):
+
+  print "0 ------", total , "idle time"
+
+for i in range (0,iter):
+	
+  index=proc.get(b_time[i])[1]
+	
+total=total+b_time[i]
+	
+print min, "____________" , total, " P",index , "Completed "
+	
+min =total
+	
