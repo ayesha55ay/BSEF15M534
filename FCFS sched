@@ -1,51 +1,40 @@
-#include<stdlib>
-$!usr/bin/python
-print (" welcome!! here we have FCFS sched in python! ")
+print("THis is my first  FCFS program in Python")
 
-proc= {}
-
-a_time=[]
-
-b_time=[]
+proc={}		//here we have dictionary to contain incoming proc
+a_time=[]	//list for incoming arrival time
+b_time=[]	//list for inccoming burst time
 
 for i in range (0,4):
-
-num=input("Enter arrival time of the process")
-	
+num=input("Enter arrival time of processes")
 if(i==0):
-		
-min=num	
-	
-elif(min>num):
-		
-min=num	
-	
+	initial=num
+
+elif(initial>num)
+	initial=num
+
 a_time.append(num)
-	
-num1=input("Enter CPU time of the process")
-	
-b_time.append(num1)
-	
+
+num2=input("Enter burst time for cpu processes")
+b_time.append(num2)
+
 proc[i+1]=[a_time[i],b_time[i]]
-	
+print "Arrival.T","		","Burst.T"
 
-print "Arrival.T"  ,"   " , "Burst.T"
+for j in range (1,5):
+print proc.get(j)[0],"		",print proc.get(j)[1]
+totaltime=initial
+if(totaltime>0):
+print "0---------",totaltime, "Idle time"
+for j in range(1,5):
+b_time=proc.get(j)[1]
+totaltime=totaltime+b_time
+print initial,"		 ", totaltime ," 		 ", j ," completed "
+initial=totaltime
 
-for index in range (1,5):
-	
-print proc.get(index)[0] ,"       " , proc.get(index)[1]	
 
-total=min
-if(total>0):
-	
-print "0 ------", total , "idle time"
 
-for index in range (1,5):
-	
-b_time=proc.get(index)[1]
-	
-total= total+b_time;
-	
-print min , "_______" ,total,  " P",index , " Completed "
-min=total	
-   
+
+
+
+
+
