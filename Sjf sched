@@ -1,56 +1,54 @@
-#include<stdlib>
-#!usr/bin/python
-print ("Welcome!! SJF in python ")
 
-proc= {}
+process= {}
 
-a_time=[]
+arrival=[]
 
-b_time=[]
+burst=[]
 
-iter= input(" How many processes you want to enter : " )
+num0= input(" How many processes you want to enter : " )
 
-for i in range (0,iter):
+for i in range (0,mun0):
 	
 num=input("Enter arrival time of the process")
 	
 if(i==0):
 		
-  min=num	
+initial=num	
 	
-elif(min>num):
-		
-  min=num	
+elif(initial>num):
 	
-a_time.append(num)
+initial=num	
+	
+arrival.append(num)
 	
 num1=input("Enter CPU time of the process")
 	
-b_time.append(num1)
+burst.append(num1)
 	
-proc[b_time[i]]=[a_time[i],i+1]
+process[burst[i]]=[arrival[i],i+1]
 
-print "Arrival.T"  ,"   " , "Burst.T"
 
-for index in range (0,itera):
+print "A.T"  ,"   " , "B.T"
 
-  print a_time[index] ,"       " , b_time[index]
+for j in range (0,num0):
+	
+print arrival[j] ,"       " , burst[j]
 
-b_time.sort()
 
-total=min
+burst.sort()
 
+total=initial
 if(total>0):
+	
+print "0 ------", total , "idle time"
 
-  print "0 ------", total , "idle time"
-
-for i in range (0,iter):
+for i in range (0,num0):
 	
-  index=proc.get(b_time[i])[1]
+j=process.get(burst[i])[1]
 	
-total=total+b_time[i]
+total=total+burst[i]
 	
-print min, "____________" , total, " P",index , "Completed "
+print initial, "____________" , total, " P", j , "Completed "
 	
-min =total
+initial =total
 	
