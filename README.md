@@ -8,7 +8,7 @@ n=input("Enter no of processes : ")
 for i in range(0,n):
 arrival=input("Enter arrival time of the processes :  ")
 if(i==0):
-initial=num
+initial=arrival
 elif(initial>arrival):
 initial=arrival
 a_time.append(arrival)
